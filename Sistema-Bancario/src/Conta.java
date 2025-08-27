@@ -1,14 +1,11 @@
 public class Conta {
 
-    Cliente titular;
-    int numero;
-    double saldo;
+    public Cliente titular;
+    public int numero;
+    private double saldo;
 
-    Conta(){
 
-    }
-
-    Conta(Cliente titular , int numero , double saldo){
+    public Conta(Cliente titular , int numero , double saldo){
 
         if(titular == null){
 
@@ -26,7 +23,27 @@ public class Conta {
         }
     }
 
-    void imprimirSaldo(){
+    public void modificarSaldo(double saldo){
+
+        if(saldo > 0){
+
+            this.saldo = saldo;
+
+        }else{
+
+            System.out.println("sua conta esta com saldo negativo");
+
+        }
+
+    }
+
+    public double obterSaldo(){
+
+        return this.saldo;
+
+    }
+
+    public void imprimirSaldo(){
 
         System.out.println("Saldo para a conta " + this.numero + ":" + this.saldo);
 
