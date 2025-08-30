@@ -32,7 +32,6 @@ public class Main {
         fulano.setCpf("1244542124");
 
         Conta contaFulano = new Conta(fulano ,2000 , 50);
-        contaFulano.modificarSaldo(-50);
 
         System.out.println("Transferindo R$ 120 para o Fulano ");
 

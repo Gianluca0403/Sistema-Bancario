@@ -2,15 +2,15 @@ public class Banco {
 
     void depositar(Conta conta , double valor){
 
-        double SaldoAtual = conta.obterSaldo();
+        double SaldoAtual = conta.getSaldo();
         Double NovoSaldo = SaldoAtual + valor;
-        conta.modificarSaldo(NovoSaldo);
+        conta.setSaldo(NovoSaldo);
 
     }
 
     void sacar(Conta conta, double valor){
 
-        double SaldoAtual = conta.obterSaldo();
+        double SaldoAtual = conta.getSaldo();
         double NovoSaldo = SaldoAtual -valor;
         if(NovoSaldo < 0){
 
@@ -18,7 +18,7 @@ public class Banco {
 
         }else{
 
-            conta.modificarSaldo(NovoSaldo);
+            conta.setSaldo(NovoSaldo);
 
         }
 
@@ -26,7 +26,7 @@ public class Banco {
 
     void transferir (Conta origem , Conta destino, double valor){
 
-        double saldoAtualOrigem = origem.obterSaldo();
+        double saldoAtualOrigem = origem.getSaldo();
         double novoSaldoOrigem = saldoAtualOrigem - valor;
 
         if(novoSaldoOrigem < 0){
@@ -35,9 +35,9 @@ public class Banco {
 
         } else {
 
-            origem.modificarSaldo(novoSaldoOrigem);
-            double saldoNovoDestino = destino.obterSaldo() + valor;
-            destino.modificarSaldo(saldoNovoDestino);
+            origem.setSaldo(novoSaldoOrigem);
+            double saldoNovoDestino = destino.getSaldo() + valor;
+            destino.setSaldo(saldoNovoDestino);
 
         }
 
