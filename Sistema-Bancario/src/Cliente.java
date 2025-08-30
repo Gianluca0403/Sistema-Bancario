@@ -9,6 +9,14 @@ public class Cliente {
 
     Cliente(String cpf , String nome){
 
+        if (!ValidarCpf.cpfValido(cpf)) {
+
+            System.out.println(("CPF Valido:") + cpf);
+
+        }else{
+
+            throw new IllegalArgumentException("CPF inválido: " + cpf);
+        };
         this.cpf = cpf;
         this.nome = nome;
 
@@ -16,6 +24,14 @@ public class Cliente {
 
     public void setCpf (String cpf){
 
+        if (!ValidarCpf.cpfValido(cpf)) {
+
+            System.out.println(("CPF Valido:") + cpf);
+
+        }else{
+
+            throw new IllegalArgumentException("CPF inválido: " + cpf);
+        }
         this.cpf = cpf;
 
     }

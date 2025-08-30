@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        Cliente pessoa = new Cliente("121513222" , "Gian");
+        Cliente pessoa = new Cliente("44584186857" , "Gian");
         Conta contaPessoa = new Conta(pessoa , 1500 , 50);
 
 
@@ -39,6 +39,9 @@ public class Main {
 
         contaFulano.imprimirSaldo();
         contaPessoa.imprimirSaldo();
+
+        ValidarCpf cpfValido = new ValidarCpf();
+
 
     }
 
