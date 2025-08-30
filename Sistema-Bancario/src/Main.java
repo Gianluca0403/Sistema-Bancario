@@ -28,8 +28,8 @@ public class Main {
         contaPessoa.imprimirSaldo();
 
         Cliente fulano = new Cliente();
-        fulano.nome = "Guilherme";
-        fulano.cpf = "1244542124";
+        fulano.setNome("Guilherme");
+        fulano.setCpf("1244542124");
 
         Conta contaFulano = new Conta(fulano ,2000 , 50);
         contaFulano.modificarSaldo(-50);
